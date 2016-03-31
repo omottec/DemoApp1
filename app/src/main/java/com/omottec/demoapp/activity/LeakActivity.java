@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.FragmentActivity;
+import android.widget.TextView;
 
 import com.omottec.demoapp.R;
 
@@ -17,11 +18,13 @@ import java.util.concurrent.TimeUnit;
 public class LeakActivity extends FragmentActivity {
     private byte[] largeObj = new byte[10 * 1024 * 1024];
     private StrongRefHandler mHandler;
+    private TextView mTV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.full_screen_text);
+        mTV = (TextView) findViewById(R.id.tv);
 //        new LeakThread().start();
 //        new StaticThread().start();
 //        new StaticStrongRefThread(this).start();
@@ -122,6 +125,21 @@ public class LeakActivity extends FragmentActivity {
             Context context = contextRef.get();
             if (context != null)
                 ; // Do Something with Context
+        }
+    }
+
+    static class StaticWeakRefRunnable implements Runnable {
+        WeakReference<TextView> tvRef;
+
+        public StaticWeakRefRunnable(TextView tv) {
+            tvRef = new WeakReference<TextView>(tv);
+        }
+
+        @Override
+        public void run() {
+            TextView tv = tvRef.get();
+            if (tv != null && tv.isShown())
+                tv.setText("Done");
         }
     }
 }
