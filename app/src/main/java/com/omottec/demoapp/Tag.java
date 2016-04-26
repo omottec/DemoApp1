@@ -5,4 +5,5 @@ package com.omottec.demoapp;
  */
 public final class Tag {
     public static final String TASK = "task";
+    public static final String APP_PROCESS = "app_process";
 }

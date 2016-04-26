@@ -1,1 +1,2 @@
-include ':app'
+include ':app', ':OneHttpDNS'
+project(':OneHttpDNS').projectDir = new File('/Users/didi/Didi/OneHttpDNS/app')

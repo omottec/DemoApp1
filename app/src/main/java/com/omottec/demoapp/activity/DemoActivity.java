@@ -2,7 +2,8 @@ package com.omottec.demoapp.activity;
 
 import android.support.v4.app.Fragment;
 
-import com.omottec.demoapp.fragment.MemoryFragment;
+import com.omottec.demoapp.fragment.SimpleFragment;
+import com.omottec.demoapp.fragment.SmartBarFragment;
 
 /**
  * Created by qinbingbing on 3/31/16.
@@ -10,6 +11,6 @@ import com.omottec.demoapp.fragment.MemoryFragment;
 public class DemoActivity extends SingleFragmentActivity {
     @Override
     protected Fragment createFragment() {
-        return new MemoryFragment();
+        return new SimpleFragment();
     }
 }
