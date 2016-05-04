@@ -66,7 +66,8 @@ public class SimpleFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 try {
-                    String ip = HttpDnsManager.INSTANCE.getIpByDomain("api.diditaxi.com");
+//                    String ip = HttpDnsManager.INSTANCE.getIpByDomain("api.diditaxi.com");
+                    String ip = HttpDnsManager.INSTANCE.getIpByDomain("diditaxi.com.cn");
                     Log.d(TAG, "ip:" + ip);
                     /*String httpDomains = "[{\"domain\":\"api.diditaxi.com\",\"host\":\"10.0.0.1|10.10.0.100\"},{\"domain\":\"dns.didichuxing.com\",\"host\":\"10.231.135.100|10.231.135.101\"},{\"domain\":\"gs.diditaxi.com\",\"host\":\"10.10.0.12|10.10.0.4|10.10.0.5|10.10.0.6\"},{\"domain\":\"pay.diditaxi.com\",\"host\":\"10.10.0.10|10.10.0.11|10.10.0.7|10.10.0.8|10.10.0.9\"}]";
                     String pushDomains = "[{\"domain\":\"push.didichuxing.com\",\"type\":\"online\",\"host\":\"10.9.0.1|10.9.0.2|10.9.1.1|10.9.1.10\"},{\"domain\":\"push.didichuxing.com\",\"type\":\"offline\",\"host\":\"10.9.0.3|10.9.0.4\"}]";
