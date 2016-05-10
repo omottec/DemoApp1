@@ -20,8 +20,7 @@ import java.util.TimerTask;
 /**
  * Created by qinbingbing on 4/19/16.
  */
-public class SimpleFragment extends Fragment {
-    public static final String TAG = "SimpleFragment";
+public class MultiProcessFragment extends Fragment {
     private View mRootView;
     private TextView mTV;
     private Context mContext;
@@ -50,5 +49,24 @@ public class SimpleFragment extends Fragment {
             public void onClick(View v) {
             }
         });
+        startService();
+        mTimer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                stopService();
+                SystemClock.sleep(3000);
+                startService();
+            }
+        }, 3000);
+    }
+
+    private void startService() {
+        Intent intent = new Intent(mContext, DemoService.class);
+        mContext.startService(intent);
+    }
+
+    private void stopService() {
+        Intent intent = new Intent(mContext, DemoService.class);
+        mContext.stopService(intent);
     }
 }

@@ -3,11 +3,8 @@ package com.omottec.demoapp.app;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
-import android.os.StrictMode;
 import android.util.Log;
 
-import com.didi.passenger.onehttpdns.HttpDnsManager;
-import com.omottec.demoapp.BuildConfig;
 import com.omottec.demoapp.Tag;
 
 import java.util.ArrayList;
@@ -34,6 +31,5 @@ public class MyApplication extends Application {
             StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().detectAll().penaltyLog().build());
             StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder().detectAll().penaltyLog().build());
         }*/
-        HttpDnsManager.INSTANCE.init(this);
     }
 }
