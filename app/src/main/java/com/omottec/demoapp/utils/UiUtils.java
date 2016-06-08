@@ -1,4 +1,4 @@
-package com.omottec.demoapp;
+package com.omottec.demoapp.utils;
 
 import android.content.Context;
 import android.content.res.Resources;

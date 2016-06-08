@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.omottec.demoapp.R;
-import com.omottec.demoapp.UiUtils;
+import com.omottec.demoapp.utils.UiUtils;
 
 /**
  * Created by qinbingbing on 4/7/16.
