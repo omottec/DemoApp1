@@ -3,6 +3,7 @@ package com.omottec.demoapp.activity;
 import android.support.v4.app.Fragment;
 
 import com.omottec.demoapp.fragment.BuildConfigFragment;
+import com.omottec.demoapp.fragment.MemoryFragment;
 import com.omottec.demoapp.fragment.SimpleFragment;
 import com.omottec.demoapp.fragment.SmartBarFragment;
 
@@ -12,6 +13,6 @@ import com.omottec.demoapp.fragment.SmartBarFragment;
 public class DemoActivity extends SingleFragmentActivity {
     @Override
     protected Fragment createFragment() {
-        return new BuildConfigFragment();
+        return new MemoryFragment();
     }
 }

@@ -42,9 +42,14 @@ public class MemoryFragment extends Fragment {
         ActivityManager am = (ActivityManager) mActivity.getSystemService(Context.ACTIVITY_SERVICE);
         int memoryClass = am.getMemoryClass();
         long maxMemory = Runtime.getRuntime().maxMemory();
+        long totalMemory = Runtime.getRuntime().totalMemory();
+        long freeMemory = Runtime.getRuntime().freeMemory();
+
         StringBuilder sb = new StringBuilder();
         sb.append("memoryClass: ").append(memoryClass)
-                .append("\n").append("maxMemory: ").append(maxMemory);
+                .append("\nmaxMemory: ").append(maxMemory)
+                .append("\ntotalMemory: ").append(totalMemory)
+                .append("\nfreeMemory: ").append(freeMemory);
         mTV.setText(sb.toString());
     }
 }

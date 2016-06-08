@@ -5,6 +5,8 @@ import java.util.concurrent.Executors;
 
 /**
  * Created by qinbingbing on 4/5/16.
+ * adb shell am kill [--user <USER_ID> | all | current] <PACKAGE>
+ * adb shell pm list packages
  */
 public final class MemorySimulator {
     private MemorySimulator() {

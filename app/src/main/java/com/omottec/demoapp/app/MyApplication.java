@@ -32,4 +32,16 @@ public class MyApplication extends Application {
             StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder().detectAll().penaltyLog().build());
         }*/
     }
+
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        Log.d(Tag.MEMORY, "onLowMemory");
+    }
+
+    @Override
+    public void onTrimMemory(int level) {
+        super.onTrimMemory(level);
+        Log.d(Tag.MEMORY, "onTrimMemory level:" + level);
+    }
 }
