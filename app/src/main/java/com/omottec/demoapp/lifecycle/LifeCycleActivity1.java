@@ -72,7 +72,7 @@ public class LifeCycleActivity1 extends FragmentActivity {
     protected void onResume() {
         super.onResume();
         Log.d(Tag.ACTIVITY_LIFECYCLE, this + "|onResume");
-//        MemorySimulator.drainMemory();
+//        MemorySimulator.drainMemoryDouble();
     }
 
     @Override

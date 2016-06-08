@@ -1,5 +1,10 @@
 package com.omottec.demoapp.utils;
 
+import android.os.SystemClock;
+import android.util.Log;
+
+import com.omottec.demoapp.Tag;
+
 import java.util.Arrays;
 import java.util.concurrent.Executors;
 
@@ -12,22 +17,44 @@ public final class MemorySimulator {
     private MemorySimulator() {
     }
 
-    public static void asyncDrainMemory() {
+    public static void asyncDrainMemoryDouble() {
         Executors.newSingleThreadExecutor().submit(new Runnable() {
             @Override
             public void run() {
-                drainMemory();
+                drainMemoryDouble();
             }
         });
     }
 
-    public static void drainMemory() {
+    public static void asyncDrainMemorySlow(final long internal) {
+        Executors.newSingleThreadExecutor().submit(new Runnable() {
+            @Override
+            public void run() {
+                drainMemorySlow(internal);
+            }
+        });
+    }
+
+    public static void drainMemoryDouble() {
         byte[] bytes = new byte[1 * 1024 * 1024];
-        System.out.println("alloc memory " + bytes.length / 1024 / 1024 + "M");
+        Log.d(Tag.MEMORY, "alloc memory " + bytes.length / 1024 / 1024 + "M");
         for (int i = 0; i <= bytes.length; i++) {
             if (i == bytes.length) {
                 bytes = Arrays.copyOf(bytes, bytes.length * 2);
-                System.out.println("alloc memory " + bytes.length / 1024 / 1024 + "M");
+                Log.d(Tag.MEMORY, "alloc memory " + bytes.length / 1024 / 1024 + "M");
+            }
+            bytes[i] = 1;
+        }
+    }
+
+    public static void drainMemorySlow(long internal) {
+        byte[] bytes = new byte[1 * 1024 * 1024];
+        Log.d(Tag.MEMORY, "alloc memory " + bytes.length / 1024 / 1024 + "M");
+        for (int i = 0; i <= bytes.length; i++) {
+            if (i == bytes.length) {
+                SystemClock.sleep(internal);
+                bytes = Arrays.copyOf(bytes, bytes.length + 1 * 1024 * 1024);
+                Log.d(Tag.MEMORY, "alloc memory " + bytes.length / 1024 / 1024 + "M");
             }
             bytes[i] = 1;
         }
