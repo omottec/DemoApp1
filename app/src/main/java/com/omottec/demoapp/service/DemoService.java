@@ -19,12 +19,6 @@ public class DemoService extends Service {
     }
 
     @Override
-    public void onStart(Intent intent, int startId) {
-        super.onStart(intent, startId);
-        Log.d(Tag.APP_PROCESS, "DemoService.onStart");
-    }
-
-    @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.d(Tag.APP_PROCESS, "DemoService.onStartCommand");
         return super.onStartCommand(intent, flags, startId);
@@ -32,7 +26,7 @@ public class DemoService extends Service {
 
     @Override
     public void onDestroy() {
-        super.onDestroy();
         Log.d(Tag.APP_PROCESS, "DemoService.onDestroy");
+        super.onDestroy();
     }
 }
