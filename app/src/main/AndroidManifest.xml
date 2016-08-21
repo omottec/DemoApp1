@@ -33,7 +33,10 @@
         </activity>
 
         <activity android:name=".lifecycle.LifeCycleActivity1">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
 
         <activity android:name=".lifecycle.LifeCycleActivity2">
@@ -43,10 +46,7 @@
         <activity
             android:name=".activity.LoadDexActivity"
             android:process=":loaddex">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+
         </activity>
 
         <service android:name=".service.DemoService"

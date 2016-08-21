@@ -85,6 +85,7 @@ public class LifeCycleActivity1 extends FragmentActivity {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         Log.d(Tag.ACTIVITY_LIFECYCLE, this + "|onSaveInstanceState");
+        Log.d(Tag.ACTIVITY_LIFECYCLE, "outState:" + outState.hashCode());
         outState.putInt(KEY_ID, ID);
     }
 
