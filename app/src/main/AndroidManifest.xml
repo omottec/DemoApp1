@@ -1,23 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.omottec.demoapp">
+    package="com.omottec.demoapp1">
 
     <application
+        android:name=".app.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+        <activity android:name=".task.WelcomeActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity android:name=".task.MainActivity"
+            android:launchMode="singleTask">
+        </activity>
+
+        <activity android:name=".activity.LeakActivity">
+
+        </activity>
+
+        <activity
+            android:name=".activity.StrictModeActivity">
+
+        </activity>
+
+        <activity android:name=".activity.DemoActivity">
+
+        </activity>
+
+        <activity android:name=".lifecycle.LifeCycleActivity1">
+
+        </activity>
+
+        <activity android:name=".lifecycle.LifeCycleActivity2">
+
+        </activity>
+
+        <activity
+            android:name=".activity.LoadDexActivity"
+            android:process=":loaddex">
+
+        </activity>
+
+        <service android:name=".service.DemoService"
+            android:process=":service">
+
+        </service>
     </application>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
 </manifest>
