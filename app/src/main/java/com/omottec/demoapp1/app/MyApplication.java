@@ -1,21 +1,16 @@
-package com.omottec.demoapp.app;
+package com.omottec.demoapp1.app;
 
 import android.app.Activity;
-import android.app.ActivityManager;
 import android.app.Application;
 import android.content.Context;
 import android.os.Process;
-import android.os.SystemClock;
 import android.util.Log;
 
-import com.omottec.demoapp.Tag;
-import com.omottec.demoapp.utils.AppUtils;
+import com.omottec.demoapp1.Tag;
+import com.omottec.demoapp1.utils.AppUtils;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * Created by qinbingbing on 3/23/16.

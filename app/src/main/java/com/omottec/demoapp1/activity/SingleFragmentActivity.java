@@ -1,11 +1,11 @@
-package com.omottec.demoapp.activity;
+package com.omottec.demoapp1.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 
-import com.omottec.demoapp.R;
+import com.omottec.demoapp1.R;
 
 public abstract class SingleFragmentActivity extends FragmentActivity {
     protected abstract Fragment createFragment();

@@ -1,4 +1,4 @@
-package com.omottec.demoapp;
+package com.omottec.demoapp1;
 
 /**
  * Created by qinbingbing on 3/23/16.

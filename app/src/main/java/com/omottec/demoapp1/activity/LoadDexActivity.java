@@ -1,17 +1,12 @@
-package com.omottec.demoapp.activity;
+package com.omottec.demoapp1.activity;
 
-import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.PersistableBundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
 import android.widget.TextView;
 
-import com.omottec.demoapp.R;
-import com.omottec.demoapp.Tag;
+import com.omottec.demoapp1.R;
 
 /**
  * Created by qinbingbing on 8/18/16.

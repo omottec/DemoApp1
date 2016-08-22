@@ -1,4 +1,4 @@
-package com.omottec.demoapp.utils;
+package com.omottec.demoapp1.utils;
 
 import android.app.ActivityManager;
 import android.content.Context;

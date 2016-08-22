@@ -1,13 +1,13 @@
-package com.omottec.demoapp.activity;
+package com.omottec.demoapp1.activity;
 
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.os.SystemClock;
 import android.support.v4.app.FragmentActivity;
 
-import com.omottec.demoapp.R;
-import com.omottec.demoapp.app.MyApplication;
-import com.omottec.demoapp.io.IoUtils;
+import com.omottec.demoapp1.R;
+import com.omottec.demoapp1.app.MyApplication;
+import com.omottec.demoapp1.io.IoUtils;
 
 import java.util.concurrent.TimeUnit;
 

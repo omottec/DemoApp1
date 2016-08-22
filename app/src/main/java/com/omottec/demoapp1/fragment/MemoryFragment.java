@@ -1,4 +1,4 @@
-package com.omottec.demoapp.fragment;
+package com.omottec.demoapp1.fragment;
 
 import android.app.Activity;
 import android.app.ActivityManager;
@@ -11,8 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.omottec.demoapp.R;
-import com.omottec.demoapp.utils.MemorySimulator;
+import com.omottec.demoapp1.R;
+import com.omottec.demoapp1.utils.MemorySimulator;
 
 import java.util.Timer;
 import java.util.TimerTask;

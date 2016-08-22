@@ -1,4 +1,4 @@
-package com.omottec.demoapp.fragment;
+package com.omottec.demoapp1.fragment;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,8 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.omottec.demoapp.R;
-import com.omottec.demoapp.service.DemoService;
+import com.omottec.demoapp1.R;
+import com.omottec.demoapp1.service.DemoService;
 
 import java.util.Timer;
 import java.util.TimerTask;

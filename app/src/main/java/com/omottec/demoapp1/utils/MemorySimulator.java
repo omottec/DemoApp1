@@ -1,9 +1,9 @@
-package com.omottec.demoapp.utils;
+package com.omottec.demoapp1.utils;
 
 import android.os.SystemClock;
 import android.util.Log;
 
-import com.omottec.demoapp.Tag;
+import com.omottec.demoapp1.Tag;
 
 import java.util.Arrays;
 import java.util.concurrent.Executors;

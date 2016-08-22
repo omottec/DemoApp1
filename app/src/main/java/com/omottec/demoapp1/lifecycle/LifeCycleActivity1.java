@@ -1,4 +1,4 @@
-package com.omottec.demoapp.lifecycle;
+package com.omottec.demoapp1.lifecycle;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -9,9 +9,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import com.omottec.demoapp.R;
-import com.omottec.demoapp.Tag;
-import com.omottec.demoapp.utils.MemorySimulator;
+import com.omottec.demoapp1.R;
+import com.omottec.demoapp1.Tag;
 
 /**
  * Created by qinbingbing on 6/8/16.

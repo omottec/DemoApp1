@@ -1,59 +1,45 @@
-package com.omottec.demoapp.task;
+package com.omottec.demoapp1.task;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import com.omottec.demoapp.R;
-import com.omottec.demoapp.Tag;
+import com.omottec.demoapp1.R;
+import com.omottec.demoapp1.Tag;
 
 /**
  * Created by qinbingbing on 3/23/16.
  */
-public class WelcomeActivity extends FragmentActivity implements View.OnClickListener {
+public class MainActivity extends FragmentActivity implements View.OnClickListener {
     private static int count;
-    private final int ID = count++;
-    private Handler mHandler;
-    private TextView mTv;
-    private TextView mTv1;
+    private static final int ID = count++;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.two_text);
-        mTv = (TextView) findViewById(R.id.tv);
-        mTv1 = (TextView) findViewById(R.id.tv1);
-        mTv.setBackgroundColor(Color.BLUE);
-        mTv.setText("WelcomeActivity" + ID);
+        TextView tv = (TextView) findViewById(R.id.tv);
+        TextView tv1 = (TextView) findViewById(R.id.tv1);
+        tv.setBackgroundColor(Color.GREEN);
+        tv.setText("MainActivity" + ID);
+        tv.setOnClickListener(this);
+        tv1.setOnClickListener(this);
         Log.d(Tag.TASK, "taskId:" + getTaskId() + "|" + this + "|onCreate|" + ID);
-        mHandler = new Handler();
-        /*mHandler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
-                finish();
-            }
-        }, 200);*/
-        mTv.setOnClickListener(this);
-        mTv1.setOnClickListener(this);
     }
 
     private void startSelf() {
-        Intent intent = new Intent(this, WelcomeActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        Log.d(Tag.TASK, "taskId:" + getTaskId() + "|" + this + "onNewIntent");
+        Log.d(Tag.TASK, "taskId:" + getTaskId() + "|" + this + "|onNewIntent");
     }
 
     @Override
@@ -104,9 +90,8 @@ public class WelcomeActivity extends FragmentActivity implements View.OnClickLis
         Log.d(Tag.TASK, "taskId:" + getTaskId() + "|" + this + "|onDestroy");
     }
 
-    private void startMainActivity() {
-        Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+    private void startWelcomeActivity() {
+        Intent intent = new Intent(this, WelcomeActivity.class);
         startActivity(intent);
     }
 
@@ -114,7 +99,7 @@ public class WelcomeActivity extends FragmentActivity implements View.OnClickLis
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.tv:
-                startMainActivity();
+                startWelcomeActivity();
                 break;
             case R.id.tv1:
                 startSelf();

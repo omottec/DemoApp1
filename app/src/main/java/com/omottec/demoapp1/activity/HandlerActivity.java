@@ -1,4 +1,4 @@
-package com.omottec.demoapp.activity;
+package com.omottec.demoapp1.activity;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -9,7 +9,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 
-import com.omottec.demoapp.R;
+import com.omottec.demoapp1.R;
 
 /**
  * Created by qinbingbing on 4/30/16.

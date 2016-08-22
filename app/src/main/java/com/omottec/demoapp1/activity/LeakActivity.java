@@ -1,4 +1,4 @@
-package com.omottec.demoapp.activity;
+package com.omottec.demoapp1.activity;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -7,7 +7,7 @@ import android.os.Message;
 import android.support.v4.app.FragmentActivity;
 import android.widget.TextView;
 
-import com.omottec.demoapp.R;
+import com.omottec.demoapp1.R;
 
 import java.lang.ref.WeakReference;
 import java.util.concurrent.TimeUnit;

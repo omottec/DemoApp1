@@ -1,4 +1,4 @@
-package com.omottec.demoapp.fragment;
+package com.omottec.demoapp1.fragment;
 
 import android.app.Activity;
 import android.graphics.Rect;
@@ -13,8 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.omottec.demoapp.R;
-import com.omottec.demoapp.utils.UiUtils;
+import com.omottec.demoapp1.R;
+import com.omottec.demoapp1.utils.UiUtils;
 
 /**
  * Created by qinbingbing on 4/7/16.

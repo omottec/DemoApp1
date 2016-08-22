@@ -1,25 +1,23 @@
-package com.omottec.demoapp.fragment;
+package com.omottec.demoapp1.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.omottec.demoapp.BuildConfig;
-import com.omottec.demoapp.R;
+import com.omottec.demoapp1.R;
 
 import java.util.Timer;
 
 /**
  * Created by qinbingbing on 4/19/16.
  */
-public class BuildConfigFragment extends Fragment {
-    public static final String TAG = "BuildConfigFragment";
+public class SimpleFragment extends Fragment {
+    public static final String TAG = "SimpleFragment";
     private View mRootView;
     private TextView mTV;
     private Context mContext;
@@ -48,10 +46,5 @@ public class BuildConfigFragment extends Fragment {
             public void onClick(View v) {
             }
         });
-        Log.d(TAG, "BuildConfig.APPLICATION_ID:" + BuildConfig.APPLICATION_ID);
-        Log.d(TAG, "BuildConfig.VERSION_NAME:" + BuildConfig.VERSION_NAME);
-        Log.d(TAG, "BuildConfig.VERSION_CODE:" + BuildConfig.VERSION_CODE);
-        Log.d(TAG, "BuildConfig.BUILD_TYPE:" + BuildConfig.BUILD_TYPE);
-        Log.d(TAG, "BuildConfig.DEBUG:" + BuildConfig.DEBUG);
     }
 }
