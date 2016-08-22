@@ -14,12 +14,18 @@
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+                <action android:name="com.omottec.demoapp1.action.WELCOM"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
 
         <activity android:name=".task.MainActivity"
             android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="com.omottec.demoapp1.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
         </activity>
 
         <activity android:name=".activity.LeakActivity">
